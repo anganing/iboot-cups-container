@@ -16,39 +16,34 @@
 
 ## 快速开始
 
-### 构建镜像
+### 方式一：从Docker Hub拉取
 
 ```bash
-docker build -t iboot/cups-pdf:1.0.0 .
+docker pull tsc2lmy/cups-pdf:1.0.0
 ```
 
-### 运行容器
-
-#### 方式一：使用默认凭证
+使用默认凭证运行：
 ```bash
 docker run -d \
   --name cups-server \
   -p 631:631 \
-  iboot/cups-pdf:1.0.0
-```
-容器将：
-- 创建默认用户 `admin`
-- 生成6位随机密码
-- 在容器日志中显示凭证信息
-
-查看凭证信息：
-```bash
-docker logs cups-server
+  tsc2lmy/cups-pdf:1.0.0
 ```
 
-#### 方式二：使用自定义凭证
+使用自定义凭证运行：
 ```bash
 docker run -d \
   --name cups-server \
   -p 631:631 \
   -e CUPS_USER=your_username \
   -e CUPS_PASSWORD=your_password \
-  iboot/cups-pdf:1.0.0
+  tsc2lmy/cups-pdf:1.0.0
+```
+
+### 方式二：从源码构建
+
+```bash
+docker build -t tsc2lmy/cups-pdf:1.0.0 .
 ```
 
 ## 访问CUPS Web界面

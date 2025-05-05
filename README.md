@@ -16,10 +16,34 @@ A Docker container for CUPS (Common UNIX Printing System) with CUPS-PDF and CUPS
 
 ## Quick Start
 
-### Build the Image
+### Option 1: Pull from Docker Hub
 
 ```bash
-docker build -t iboot/cups-pdf:1.0.0 .
+docker pull tsc2lmy/cups-pdf:1.0.0
+```
+
+Run with default credentials:
+```bash
+docker run -d \
+  --name cups-server \
+  -p 631:631 \
+  tsc2lmy/cups-pdf:1.0.0
+```
+
+Run with custom credentials:
+```bash
+docker run -d \
+  --name cups-server \
+  -p 631:631 \
+  -e CUPS_USER=your_username \
+  -e CUPS_PASSWORD=your_password \
+  tsc2lmy/cups-pdf:1.0.0
+```
+
+### Option 2: Build from Source
+
+```bash
+docker build -t tsc2lmy/cups-pdf:1.0.0 .
 ```
 
 ### Run the Container
