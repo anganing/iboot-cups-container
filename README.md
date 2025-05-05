@@ -19,7 +19,7 @@ A Docker container for CUPS (Common UNIX Printing System) with CUPS-PDF and CUPS
 ### Option 1: Pull from Docker Hub
 
 ```bash
-docker pull tsc2lmy/cups-pdf:1.0.0
+docker pull tsc2lmy/cups-pdf:latest
 ```
 
 Run with default credentials:
@@ -27,7 +27,7 @@ Run with default credentials:
 docker run -d \
   --name cups-server \
   -p 631:631 \
-  tsc2lmy/cups-pdf:1.0.0
+  tsc2lmy/cups-pdf:latest
 ```
 
 Run with custom credentials:
@@ -37,13 +37,13 @@ docker run -d \
   -p 631:631 \
   -e CUPS_USER=your_username \
   -e CUPS_PASSWORD=your_password \
-  tsc2lmy/cups-pdf:1.0.0
+  tsc2lmy/cups-pdf:latest
 ```
 
 ### Option 2: Build from Source
 
 ```bash
-docker build -t tsc2lmy/cups-pdf:1.0.0 .
+docker build -t tsc2lmy/cups-pdf:latest .
 ```
 
 ### Run the Container
@@ -53,7 +53,7 @@ docker build -t tsc2lmy/cups-pdf:1.0.0 .
 docker run -d \
   --name cups-server \
   -p 631:631 \
-  iboot/cups-pdf:1.0.0
+  iboot/cups-pdf:latest
 ```
 The container will:
 - Create a default user `admin`
@@ -72,7 +72,7 @@ docker run -d \
   -p 631:631 \
   -e CUPS_USER=your_username \
   -e CUPS_PASSWORD=your_password \
-  iboot/cups-pdf:1.0.0
+  iboot/cups-pdf:latest
 ```
 
 ## Accessing CUPS Web Interface

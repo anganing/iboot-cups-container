@@ -19,7 +19,7 @@
 ### 方式一：从Docker Hub拉取
 
 ```bash
-docker pull tsc2lmy/cups-pdf:1.0.0
+docker pull tsc2lmy/cups-pdf:latest
 ```
 
 使用默认凭证运行：
@@ -27,7 +27,7 @@ docker pull tsc2lmy/cups-pdf:1.0.0
 docker run -d \
   --name cups-server \
   -p 631:631 \
-  tsc2lmy/cups-pdf:1.0.0
+  tsc2lmy/cups-pdf:latest
 ```
 
 使用自定义凭证运行：
@@ -37,13 +37,13 @@ docker run -d \
   -p 631:631 \
   -e CUPS_USER=your_username \
   -e CUPS_PASSWORD=your_password \
-  tsc2lmy/cups-pdf:1.0.0
+  tsc2lmy/cups-pdf:latest
 ```
 
 ### 方式二：从源码构建
 
 ```bash
-docker build -t tsc2lmy/cups-pdf:1.0.0 .
+docker build -t tsc2lmy/cups-pdf:latest .
 ```
 
 ## 访问CUPS Web界面
