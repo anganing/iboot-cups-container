@@ -22,7 +22,14 @@ A Docker container for CUPS (Common UNIX Printing System) with CUPS-PDF and CUPS
 docker pull tsc2lmy/cups-pdf:latest
 ```
 
+OR
+
+```bash
+ghcr.io/anganing/iboot-cups-container:master
+```
+
 Run with default credentials:
+
 ```bash
 docker run -d \
   --name cups-server \

@@ -22,7 +22,16 @@
 docker pull tsc2lmy/cups-pdf:latest
 ```
 
+或者
+
+```bash
+ghcr.io/anganing/iboot-cups-container:master
+```
+
+
+
 使用默认凭证运行：
+
 ```bash
 docker run -d \
   --name cups-server \
